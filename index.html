@@ -59,6 +59,17 @@
       "url": "https://utahinvestorhub.com/",
       "name": "Utah Investor Hub",
       "publisher": {"@id":"https://utahinvestorhub.com/#organization"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is house hacking in Utah?","acceptedAnswer":{"@type":"Answer","text":"House hacking means living in part of a property — one unit of a duplex, a basement apartment, or a spare bedroom — while renting out the rest. In Utah, it qualifies for owner-occupant financing (3.5% down with FHA, 5% down with conventional), making it the most capital-efficient way to start investing."}},
+        {"@type":"Question","name":"Where should I invest in Utah real estate?","acceptedAnswer":{"@type":"Answer","text":"The Wasatch Front — Salt Lake County, Utah County, Davis County, and Weber County — has the best combination of rental demand, population growth, and financing availability. Ogden, Clearfield, West Valley, and parts of Salt Lake City proper still have inventory where investor numbers work."}},
+        {"@type":"Question","name":"How much money do I need to start investing in Utah?","acceptedAnswer":{"@type":"Answer","text":"For owner-occupant strategies like house hacking, you can start with as little as 3.5%–5% of the purchase price. For pure investment properties you don't live in, expect 20–25% down plus reserves. The Utah Housing Corporation (UHC) offers down payment assistance for first-time buyers."}},
+        {"@type":"Question","name":"Can I invest in Utah real estate from out of state?","acceptedAnswer":{"@type":"Answer","text":"Yes — many Utah investors live out of state. The key is building the right team: an investor-friendly Utah agent, a property manager, and a Utah-based lender. Stodd Group handles end-to-end for out-of-state investors."}},
+        {"@type":"Question","name":"What markets in Utah are best for short-term rentals?","acceptedAnswer":{"@type":"Answer","text":"Park City and Deer Valley (ski), Moab and the Zion/Bryce area (national parks), and St. George (winter escape and golf) are Utah's top short-term rental markets. Each city regulates STRs separately — confirm current zoning before you offer."}},
+        {"@type":"Question","name":"What financing options exist for Utah investors?","acceptedAnswer":{"@type":"Answer","text":"Owner-occupant loans (FHA, VA, Conventional 5% down, UHC programs) for house hacks; investment-property loans (20–25% down) for pure rentals; hard money or private lending for BRRRR and flips; commercial loans for 5+ unit multi-family."}}
+      ]
     }
   ]
 }
@@ -127,29 +138,18 @@
   </div>
 </section>
 
-<!-- Newsletter / lead-magnet form -->
-<section id="newsletter" class="py-16 md:py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8">
-      <p class="text-brand-orange font-semibold mb-3 text-sm uppercase tracking-wide">Free Resource</p>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Get the Utah Investor Newsletter</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Market insights, deal breakdowns, and investing tips for Utah real estate &mdash; straight to your inbox.</p>
-    </div>
-    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-      <iframe src="https://api.leadconnectorhq.com/widget/form/e97IL85Q1VR6CiuS8tAY"
-        style="width:100%;height:420px;border:none;border-radius:4px"
-        id="inline-e97IL85Q1VR6CiuS8tAY"
-        data-layout='{"id":"INLINE"}'
-        data-trigger-type="alwaysShow"
-        data-activation-type="alwaysActivated"
-        data-deactivation-type="neverDeactivate"
-        data-form-name="Utah Investor Hub Newsletter"
-        data-height="420"
-        data-layout-iframe-id="inline-e97IL85Q1VR6CiuS8tAY"
-        data-form-id="e97IL85Q1VR6CiuS8tAY"
-        title="Utah Investor Hub Newsletter">
-      </iframe>
-    </div>
+<!-- Newsletter CTA band (opens popup) -->
+<section class="py-16 md:py-20 bg-brand-dark-green relative overflow-hidden">
+  <div class="absolute inset-0" style="background:radial-gradient(circle at 30% 50%, rgba(232,168,124,0.15) 0%, transparent 60%)"></div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="position:relative;z-index:1">
+    <p class="text-brand-orange font-semibold mb-3 text-sm uppercase tracking-wide">Free Weekly Insights</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Get the Utah Investor Playbook</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.85)">Market insights, deal breakdowns, financing tips, and tax strategies for Utah real estate investors &mdash; delivered to your inbox. Free, no spam, unsubscribe anytime.</p>
+    <a href="/#newsletter" class="inline-flex items-center gap-2 bg-brand-orange text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-dark-orange transition-colors shadow-lg">
+      Join the Newsletter
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    </a>
+    <p class="text-sm mt-5" style="color:rgba(255,255,255,0.6)">Join 1,000+ Utah investors. Free forever.</p>
   </div>
 </section>
 
@@ -244,13 +244,13 @@
           <li><a href="/learn-utah-real-estate/" class="text-brand-light-green hover:text-white transition-colors">Learn Utah Real Estate</a></li>
           <li><a href="/utah-real-estate-investor-blog/" class="text-brand-light-green hover:text-white transition-colors">Investor Blog</a></li>
           <li><a href="/utah-realtor-for-investors-jocelyn-kaufman/" class="text-brand-light-green hover:text-white transition-colors">Buy &middot; Sell &middot; Invest</a></li>
-          <li></li>
+
         </ul>
       </div>
       <div>
         <h4 class="font-bold mb-4 text-brand-orange">Resources</h4>
         <ul class="space-y-3">
-          <li></li>
+
                     <li><a href="/contact-us/" class="text-brand-light-green hover:text-white transition-colors">Contact</a></li>
         </ul>
       </div>
