@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/idx-wrapper", "destination": "/", "permanent": true },
+    { "source": "/idx-wrapper/", "destination": "/", "permanent": true }
+  ]
+}
