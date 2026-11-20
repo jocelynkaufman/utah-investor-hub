@@ -77,6 +77,16 @@ Run a claim-audit scan: count every `\d+%`, `\$[\d,]+`, mention of Utah law or s
 
 Update `sitemap.xml` with the new article URL (lastmod today, changefreq yearly, priority 0.6).
 
+**Add the article to every listing page it belongs on** (otherwise it's live at its URL but orphaned — tag pages, blog hub, and strategy pages won't show it):
+
+1. **Blog hub** (`utah-real-estate-investor-blog/index.html`) — always. Insert a new `<article class="article-card ...">` card at the TOP of the grid (right after `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`). Card format: copy the exact HTML pattern from the first existing card. Use `/<slug>/hero.webp` for the image, title-case tag labels (e.g., "BRRRR", "Financing"), `data-tags="<space-separated tag slugs>"`, and `November DD, YYYY` date format.
+
+2. **Each tag page** the article belongs to — always. For each tag in the article's tag list, open `tag/<tag-slug>/index.html` and insert a card at the top of its grid (same insertion point). Note: tag page cards use a slightly different `<article>` class (no `article-card`, no `data-tags`, `loading="lazy"` on the img, `&rarr;` instead of the SVG arrow). Copy the exact HTML pattern from an existing card on that same tag page.
+
+3. **Matching strategy page** — when the article's primary tag has a same-slug strategy page. Mapping: `house-hacking`, `brrrr`, `short-term-rentals`, `multi-family`. Open `real-estate-investing/<tag-slug>/index.html` and add a Related Reading anchor card at the TOP of its Related Reading grid (simpler card format — no image, just title + "Read →" link). Copy the exact pattern from an existing card there.
+
+Verify after inserting: `grep -l "<slug>" utah-real-estate-investor-blog/index.html tag/*/index.html real-estate-investing/*/index.html` should show every page you intended to update.
+
 ### STEP 4 — Post preview in chat
 
 Open with:
@@ -119,7 +129,11 @@ Close with:
 **On approval** (e.g., "ship it", "approve", "looks good", "publish"):
 
 ```bash
-git add <slug>/ sitemap.xml _automation/topic-ideas.md
+git add <slug>/ sitemap.xml _automation/topic-ideas.md \
+    utah-real-estate-investor-blog/index.html \
+    tag/*/index.html \
+    real-estate-investing/*/index.html
+git status --short  # verify only the files you touched are staged
 git commit -m "Weekly article: <title>
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>"
@@ -153,6 +167,6 @@ If Jocelyn doesn't reply within 24 hours:
 
 - Do not open a GitHub PR. This routine commits straight to main after Jocelyn approves in chat.
 - Do not auto-publish without approval, ever.
-- Do not touch files other than `<slug>/index.html`, `<slug>/hero.webp`, `sitemap.xml`, and `_automation/topic-ideas.md`.
+- Do not touch files other than `<slug>/index.html`, `<slug>/hero.webp`, `sitemap.xml`, `_automation/topic-ideas.md`, and the listing pages (blog hub, tag pages, strategy page) the article is being added to.
 - Do not research for more than ~30 min of session time before posting the draft. First draft in chat > polishing in silence.
 - Do not source or use photos for the hero. The hero is always the generated branded WebP — nothing else.
