@@ -58,7 +58,7 @@ Write the article body:
 ### STEP 3 — Build the article files (silent)
 
 1. Create `<slug>/index.html` by copying `_templates/article.html` and filling every `{{PLACEHOLDER}}` token.
-2. Build `{{RELATED_CARDS}}` from 3 existing articles sharing at least one tag with this one.
+2. Build `{{RELATED_CARDS}}` from 3 existing articles sharing at least one tag with this one. **Text-only cards — no image wrapper, no `<div style="aspect-ratio:16/10;...">`.** Just the anchor, `<div class="p-5">`, `<h3>`, and "Read →". Copy the pattern verbatim from any existing article's Related Reading section.
 3. Build `{{ARTICLE_SCHEMA_JSON}}` as a `@graph` with Article + BreadcrumbList (copy pattern from any existing article).
 4. Build `{{NEWSLETTER_POPUP_MODAL}}` by copying the full block verbatim from any existing article.
 
