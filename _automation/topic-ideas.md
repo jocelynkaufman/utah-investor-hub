@@ -8,15 +8,6 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 ## Queue (next to publish, top first)
 
-### 2. DSCR Loans in Utah: How to Qualify on Rental Income Instead of W-2s
-- **Primary keyword**: dscr loan utah
-- **Volume gut-check**: med
-- **Competitor coverage gap**: https://griffinfunding.com/utah-mortgage-lender/dscr-loans-utah, https://easystreetcap.com/dscr-loans-utah/, https://www.corevestfinance.com/utah-dcsr-loans (all lender marketing; no neutral investor/REALTOR guide)
-- **Tags**: financing, first-time-investor
-- **Compliance exposure**: none (no specific rate promises)
-- **Angle**: DSCR math with Utah rent comps, typical requirements (1.0–1.25 ratio, ~680+ credit, 20–25% down), why rural or seasonal properties struggle to qualify, and when DSCR beats a conventional loan for scaling past 4 properties.
-- **Why it ranks**: Investors search this term with intent to act, and there's no non-lender answer on page one.
-
 ### 3. Utah Security Deposit Law: The 30-Day Rule, Deductions and Penalties for Landlords
 - **Primary keyword**: utah security deposit law
 - **Volume gut-check**: high
@@ -59,6 +50,7 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 _Entries move here after the weekly routine publishes them._
 
+- [x] 2026-11-19 - DSCR Loans in Utah: How to Qualify on Rental Income Instead of W-2s
 - [x] 2026-11-19 - BRRRR in Utah: Does the Strategy Still Work With Today's Prices and Rates?
 
 ---
