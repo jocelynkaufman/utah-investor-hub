@@ -50,14 +50,19 @@ Append each new topic to `_automation/topic-ideas.md` at the END of the Queue se
 ```markdown
 ### [Number]. [Title]
 - **Primary keyword**: [keyword]
+- **Volume gut-check**: low | med | high — honest read on search volume
+- **Competitor coverage gap**: [URL(s) of the top-ranking competing articles; what they miss; or "no strong competing coverage"]
 - **Tags**: [one or two from the list]
+- **Compliance exposure**: [none | tax/legal disclaimer needed | city-specific rules | Fair Housing | REALTOR code risk] — the writer prompt will pull in appropriate disclaimers based on this tag
 - **Hero image path**: _(fill in monthly)_
 - **Image prompt**: [2-4 phrase description of ideal photo]
-- **Angle**: [2-3 sentence outline of what the article should cover]
+- **Angle**: [2-3 sentences, 50 words max — what the article should cover]
 - **Why it ranks**: [one sentence — the SEO or conversion rationale]
 ```
 
 Renumber the Queue section sequentially (edit existing numbers if needed so the list stays clean).
+
+**Quality bar:** Do NOT fill a slot with a weak topic just to hit 4-6. If you can only defensibly recommend 3 strong topics this round, add 3 and flag why you stopped in the PR body. A weak topic (low volume + no clear conversion path) hurts the pipeline more than an empty slot.
 
 ### Image prompts
 
@@ -71,15 +76,20 @@ The owner will use these prompts when sourcing hero images for the month.
 
 ### Branch, commit, PR (no merge)
 
+**Stage ONLY `_automation/topic-ideas.md`.** If other agents have untracked work in the tree (county pages, blog articles, anything), do not pull it in by accident. Use the explicit path below.
+
+If `_automation/topic-ideas.md` does not exist on the current branch (because it only lives on an unmerged PR branch), bring it over from the latest branch where it exists (`git show <branch>:_automation/topic-ideas.md > _automation/topic-ideas.md`) and cite the merge-order dependency in your PR body. Do not silently create an empty file.
+
 ```bash
 git checkout -b topic-research/$(date +%Y-%m)
 git add _automation/topic-ideas.md
+git status --short  # verify ONLY the one file is staged
 git commit -m "Monthly topic research: $(date +%B\ %Y)
 
 Added [N] new topics to the pipeline. Reviewed existing coverage to
 avoid overlap. Image prompts included for owner's hero-image sourcing.
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>"
 git push -u origin topic-research/$(date +%Y-%m)
 gh pr create --base main --title "Monthly topic research: $(date +%B\ %Y)" --body "
 ### New topics added to pipeline
