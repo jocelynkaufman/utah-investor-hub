@@ -49,6 +49,7 @@ Write the article body:
 **Required inclusions:**
 - 2-4 inline links to existing UIH articles (descriptive anchor text, never "click here")
 - 1-2 outbound links to authoritative sources (`target="_blank" rel="noopener"`)
+- **Every in-body mention of "Stodd Group" or "Stodd Group Real Estate" MUST link to `https://stoddgroup.com/` with `target="_blank" rel="noopener"`.** Includes the author bio template — if the bio copy says "Stodd Group Real Estate", that mention is a link too. Applies to body copy only, not JSON-LD, footer, or CTA bands where the link already exists in the chrome.
 - Clear takeaway at the end — what should the reader do next
 
 **Required exclusions:**
