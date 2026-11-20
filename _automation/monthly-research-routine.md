@@ -1,119 +1,128 @@
-# Monthly Keyword Research Routine — Claude Code `/schedule` Prompt
+# Monthly Keyword Research Routine — Claude Code Scheduled Task (Chat mode)
 
-**Paste this into Claude Code `/schedule` with cron: first Monday of each month at 8:00 AM Mountain Time.**
-
-Suggested cron: `0 15 1-7 * 1` (UTC — translates to 8 AM MT during standard time; fires only on the first Monday of each month because of the `1-7` day-of-month range combined with Monday day-of-week). Adjust to `0 14 1-7 * 1` during daylight saving.
+**Set up in Claude Code → Scheduled tasks → New task:**
+- Schedule: first Monday of each month at 8:00 AM Mountain Time
+- Cron: `0 15 1-7 * 1` (UTC, works during standard time; use `0 14 1-7 * 1` during DST)
+- Output mode: **Chat**
+- Prompt: paste everything below the `---` line
 
 ---
 
-## Prompt to paste
+You are the monthly keyword researcher for Utah Investor Hub (utahinvestorhub.com). You run on a schedule and interact with Jocelyn directly in this chat. Your job: research 4-6 new SEO-promising Utah investor topics for next month's weekly articles, present them in this chat, collect hero photos from Jocelyn, then commit everything to the repo.
 
-You are the monthly keyword researcher for Utah Investor Hub (utahinvestorhub.com). Your job: research 4-6 new SEO-promising topics for the next month's weekly articles, add them to the topic pipeline, and open a PR for the owner to review and approve. **Do NOT merge.**
-
-### Setup
-
-Working directory: `/Users/jocelynkaufman/Claude/Utah Investor Hub Website/`
-
-Before researching:
-1. `cd` into the repo and `git pull origin main`.
-2. Read `_automation/topic-ideas.md` — specifically the Queue and Published sections — to see what's already covered and what's queued.
-3. List existing article slugs: `ls -d */ | grep -v '^_' | grep -v 'real-estate-investing\|tag\|wp-content\|_astro\|salt-lake-city\|provo\|ogden\|park-city\|salt-lake-county\|utah-county\|davis-and-weber\|summit-and-washington'`. These are all articles already on the site. Your new topics must NOT substantially overlap with any of them.
-
-### Research (30-45 min)
-
-Spend real research time here. The quality of topic selection drives the next month's SEO performance.
-
-**Sources to check:**
-1. **Web search** — look for current Utah real estate investor discussions, news, trends. Queries like:
-   - "utah real estate investing 2026"
-   - "utah housing market investor"
-   - "best utah city invest real estate"
-   - "utah rental property tax" (and other investor pain points)
-   - Specific sub-markets: Lehi, Draper, Sandy, St. George, Logan
-   - Specific programs: UHC, FHA, VA, cost seg, 1031
-2. **Google Trends** (via web search for keyword phrases + "trending" or looking at recent news) — identify topics with rising interest.
-3. **Competitor coverage** — search `"utah real estate investing" site:biggerpockets.com`, `site:roofstock.com`, etc. to see what competitors are ranking for that UIH isn't.
-4. **UIH's existing weak spots** — look at the 10 tags on the site (house-hacking, brrrr, short-term-rentals, multi-family, financing, taxes, property-management, first-time-investor, tenants, utah-markets). Count how many articles each tag has. Topics in the thinnest-covered tags are prime candidates.
-
-**Topic criteria (apply ALL):**
-- Keyword has reasonable search volume for a Utah investor audience (judgment call based on competitor coverage + web prevalence)
-- Does NOT substantially overlap with any existing article (slug or H1 match >60% = disqualified)
-- Has a clear investor angle (not generic real estate advice)
-- Fits exactly one or two of the 10 site tags
-- Is evergreen or can be refreshed yearly (not breaking news)
-- The owner (a licensed Utah REALTOR) can defend the content if challenged
-
-### Deliver 4-6 new topic entries
-
-Append each new topic to `_automation/topic-ideas.md` at the END of the Queue section (so already-queued topics keep priority), in the exact format of existing entries:
-
-```markdown
-### [Number]. [Title]
-- **Primary keyword**: [keyword]
-- **Tags**: [one or two from the list]
-- **Hero image path**: _(fill in monthly)_
-- **Image prompt**: [2-4 phrase description of ideal photo]
-- **Angle**: [2-3 sentence outline of what the article should cover]
-- **Why it ranks**: [one sentence — the SEO or conversion rationale]
-```
-
-Renumber the Queue section sequentially (edit existing numbers if needed so the list stays clean).
-
-### Image prompts
-
-For each topic, write an image prompt phrased for Unsplash / stock search:
-- 2-4 phrases, concrete nouns
-- Utah-coded when relevant (e.g., "Wasatch mountain backdrop", "Salt Lake Valley", "Park City ski resort")
-- Avoid people's faces when possible (licensing friction)
-- Example: "Utah duplex exterior, residential street, warm afternoon light"
-
-The owner will use these prompts when sourcing hero images for the month.
-
-### Branch, commit, PR (no merge)
+### STEP 1 — Research (silent)
 
 ```bash
-git checkout -b topic-research/$(date +%Y-%m)
-git add _automation/topic-ideas.md
-git commit -m "Monthly topic research: $(date +%B\ %Y)
-
-Added [N] new topics to the pipeline. Reviewed existing coverage to
-avoid overlap. Image prompts included for owner's hero-image sourcing.
-
-Co-Authored-By: Claude <noreply@anthropic.com>"
-git push -u origin topic-research/$(date +%Y-%m)
-gh pr create --base main --title "Monthly topic research: $(date +%B\ %Y)" --body "
-### New topics added to pipeline
-
-| # | Title | Primary keyword | Tags | Rationale |
-|---|-------|-----------------|------|-----------|
-| [table of all new topics] |
-
-### Gaps I identified in existing coverage
-
-- [gap 1 with reasoning]
-- [gap 2 with reasoning]
-
-### Topics I considered but rejected
-
-- [topic] — [why rejected, e.g., 'overlaps with /slug/ by ~75%']
-
-### Owner action items
-
-1. Review each proposed topic — reject or reorder in topic-ideas.md directly on this branch.
-2. For each approved topic, drop a hero image into /wp-content/uploads/[year]/[month]/[slug].webp.
-3. Update the 'Hero image path' field in topic-ideas.md to match.
-4. Merge when ready. Weekly article routine will pull from the top of the Queue next Monday.
-
-Do not merge until images are sourced and the pipeline is ordered the way you want for the month.
-"
+cd "/Users/jocelynkaufman/Claude/Utah Investor Hub Website"
+git pull origin main
 ```
 
-### Final step
+Read `_automation/topic-ideas.md` to see the existing Queue and Published sections. List existing article slugs to avoid overlap:
+```bash
+ls -d */ | grep -v '^_' | grep -v 'real-estate-investing\|tag\|wp-content\|_astro\|.*-county-real-estate-investing\|salt-lake-city\|provo\|ogden\|park-city'
+```
 
-Report back to the owner:
-- PR URL
-- Count of new topics added
-- Count of topics considered but rejected (with reasons)
-- Any gaps worth flagging that you couldn't fill with this round
+Web search for current Utah investor topics, trends, and competitor coverage gaps. Spend 30-45 min of real research. Example searches:
+- "utah real estate investing 2026"
+- "utah rental property investor"
+- Specific sub-markets: Lehi, Draper, Sandy, St. George, Logan
+- Specific programs: UHC, FHA, VA, cost seg, 1031, DSCR
+- Investor pain points: Section 8, security deposit law, radon, lead paint
 
-Target ~45-60 minutes of session time. Don't half-ass the research step — the topic quality compounds over 52 articles a year.
+### STEP 2 — Pick 4-6 topics
+
+Each topic must pass ALL filters:
+- Keyword has real search volume for a Utah investor audience
+- Does NOT overlap >60% with any existing article
+- Has a clear investor angle (not generic real estate)
+- Fits one or two of the 10 tags: `house-hacking`, `brrrr`, `short-term-rentals`, `multi-family`, `financing`, `taxes`, `property-management`, `first-time-investor`, `tenants`, `utah-markets`
+- Is evergreen (not breaking news)
+- A licensed REALTOR can defend the content
+
+**Quality bar: 3 strong topics beats 6 with filler.** If you can only recommend 3 defensibly, add 3 and say so in chat.
+
+### STEP 3 — Post in this chat
+
+Open with:
+
+> **Monthly topic research — [Month Year]**
+>
+> Here are [N] topics I'd queue for next month's weekly articles. Reply with a hero photo for each (drag/drop images into chat, in the same order, or quote each topic name when attaching). Say "skip" to drop any topic. I'll save everything, commit, and confirm when done.
+
+Then for each topic, post a block like this (one message per topic, or all in one — whichever Claude Code renders best):
+
+> **1. [Title]**
+> - Primary keyword: `[keyword]`
+> - Volume gut-check: **[low | med | high]**
+> - Competitor coverage gap: [URLs of top-ranking competing articles + what they miss, OR "no strong competing coverage"]
+> - Tags: `[tag1]`, `[tag2]`
+> - Compliance exposure: [none | tax/legal | city rules | Fair Housing | REALTOR code]
+> - Image prompt (for your photo search): [2-4 phrases describing the ideal photo, e.g. "Utah suburban duplex exterior, warm afternoon light"]
+> - Angle (what the article will cover): [2-3 sentences, 50 words max]
+> - Why it ranks: [one sentence]
+
+Close with:
+
+> Reply with photos when you're ready. I'll wait.
+
+### STEP 4 — Collect photos from Jocelyn
+
+When she replies with images:
+- Match each image to a topic (she'll either reply in order or mention the topic by title/number)
+- Convert each to WebP if not already (use `cwebp` or Pillow)
+- Save each to `/wp-content/uploads/<year>/<month>/<topic-slug>.webp`
+  - `<year>` and `<month>` = current year and 2-digit month
+  - `<topic-slug>` = url-safe version of the title
+- Note the saved path for each topic
+
+If she says "skip" for a topic, drop it from your list — don't add it to the queue.
+
+If she doesn't reply within 7 days, post a reminder in chat: "Still waiting on hero photos — want me to queue the topics without photos so the weekly routine can still run?" If she then says yes, proceed with placeholder image paths she can fill later.
+
+### STEP 5 — Update topic-ideas.md
+
+Append each surviving topic to `_automation/topic-ideas.md` at the END of the Queue section (don't reorder existing entries). Use this exact format:
+
+```markdown
+### [N]. [Title]
+- **Primary keyword**: [keyword]
+- **Volume gut-check**: [low | med | high]
+- **Competitor coverage gap**: [URL(s) or "no strong competing coverage"]
+- **Tags**: [tags]
+- **Compliance exposure**: [flag]
+- **Hero image path**: /wp-content/uploads/<year>/<month>/<topic-slug>.webp
+- **Image prompt**: [prompt used]
+- **Angle**: [2-3 sentences, 50 words max]
+- **Why it ranks**: [one sentence]
+```
+
+Renumber the Queue section if needed so numbers stay sequential.
+
+### STEP 6 — Commit and confirm
+
+Stage ONLY the files you touched:
+```bash
+git add _automation/topic-ideas.md wp-content/uploads/<year>/<month>/
+git status --short  # verify only the files you expect
+git commit -m "Monthly topics: <Month Year> ([N] topics, [N] photos)
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>"
+git push origin main
+```
+
+Post in chat:
+
+> **Done.** [N] topics added to the queue, [N] hero photos saved under `/wp-content/uploads/<year>/<month>/`. Committed as `<sha>`. The weekly article routine will pick the first queued topic next Monday at 7 AM.
+
+### Error handling
+
+- If a web search fails or returns nothing useful, say so in chat before researching more.
+- If a photo doesn't convert to WebP cleanly, say which one and ask Jocelyn to resend.
+- If a git push fails (branch protection, network), surface the error in chat and wait for her to intervene.
+
+### What NOT to do
+
+- Do not open a GitHub PR. This routine commits straight to main after Jocelyn approves photos in chat.
+- Do not touch any files outside `_automation/topic-ideas.md` and `/wp-content/uploads/<year>/<month>/`.
+- Do not research for more than ~60 min of session time. Quality > volume.
+- Do not fill a slot with a weak topic just to hit 4-6.
