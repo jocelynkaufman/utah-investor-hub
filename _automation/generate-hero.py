@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a branded hero image for a UIH article.
+Generate a branded social card (OG image) for a UIH article.
 
 Usage:
     python3 _automation/generate-hero.py \
@@ -8,8 +8,13 @@ Usage:
         --slug "short-term-rental-licensing-park-city-2026" \
         --tag short-term-rentals
 
-Output: writes <slug>/hero.webp (1200x630, ~50KB). Matches OG image size,
-used as both the on-page hero and the social card image.
+Output: writes <slug>/hero.webp (1200x630, ~50KB).
+
+Used exclusively as the og:image / twitter:image for social shares — the
+article page itself does NOT render this image on-page. Stronger
+editorial look; readers go straight from title to body. The hero shows
+the article title inside the image so shared cards make sense on their
+own.
 """
 
 import argparse
@@ -134,7 +139,6 @@ def draw_tag_pill(draw, tag, img_size):
     label = tag.upper().replace("-", " ")
     text_w = draw.textlength(label, font=font)
     padding_x = 20
-    padding_y = 10
     pill_w = text_w + padding_x * 2
     pill_h = 40
     x1 = WIDTH - MARGIN - pill_w
@@ -142,7 +146,6 @@ def draw_tag_pill(draw, tag, img_size):
     x2 = x1 + pill_w
     y2 = y1 + pill_h
     draw.rounded_rectangle([x1, y1, x2, y2], radius=20, fill=(255, 255, 255, 230))
-    # Compute approximate centered y for text
     text_y = y1 + (pill_h - 20) // 2 - 4
     draw.text((x1 + padding_x, text_y), label, font=font, fill=(40, 40, 40))
 
@@ -152,7 +155,6 @@ def build_hero(title, tag):
     img = build_gradient(top_hex, bottom_hex)
     draw_mountain_silhouette(img, bottom_hex)
 
-    # Convert to RGBA for pill transparency
     img = img.convert("RGBA")
     draw = ImageDraw.Draw(img)
 

@@ -62,7 +62,7 @@ Write the article body:
 3. Build `{{ARTICLE_SCHEMA_JSON}}` as a `@graph` with Article + BreadcrumbList (copy pattern from any existing article).
 4. Build `{{NEWSLETTER_POPUP_MODAL}}` by copying the full block verbatim from any existing article.
 
-Generate the branded hero image (1200x630 WebP) using the topic's primary tag for the palette:
+Generate the branded social card (1200x630 WebP) using the topic's primary tag for the palette:
 
 ```bash
 python3 _automation/generate-hero.py \
@@ -71,7 +71,7 @@ python3 _automation/generate-hero.py \
     --tag "<primary tag>"
 ```
 
-This writes `<slug>/hero.webp`. The article template references it automatically from the slug — no extra placeholder to fill.
+This writes `<slug>/hero.webp`. **Not rendered on-page** — it's used only as the `og:image` / `twitter:image` meta (social preview card). Article pages read cleanly from title → tags → body, with no hero image above the body. The template already references `<slug>/hero.webp` in the OG meta via the SLUG token — no extra placeholder to fill.
 
 Run a claim-audit scan: count every `\d+%`, `\$[\d,]+`, mention of Utah law or statute, mention of a specific city's licensing or zoning. Collect for the chat preview.
 
@@ -88,7 +88,7 @@ Open with:
 > **Tags:** [tags]
 > **Word count:** [N]
 
-Attach the generated hero image (`<slug>/hero.webp`) so Jocelyn sees it inline.
+Attach the generated social card (`<slug>/hero.webp`) so Jocelyn sees what the OG preview will look like when shared.
 
 Then post the section outline (H2s only):
 
