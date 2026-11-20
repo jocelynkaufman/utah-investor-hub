@@ -8,15 +8,6 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 ## Queue (next to publish, top first)
 
-### 1. BRRRR in Utah: Does the Strategy Still Work With Today's Prices and Rates?
-- **Primary keyword**: brrrr utah
-- **Volume gut-check**: med
-- **Competitor coverage gap**: https://biggerpockets.com/forums/586/topics/555988-new-investor-do-brrrr-s-exist-in-our-current-utah-market, https://biggerpockets.com/forums/12/topics/871924-do-brrr-deals-work-in-the-utah-market (old, unresolved threads); https://propstream.com/news/is-the-brrrr-strategy-relevant-in-2026, https://www.inman.com/2026/09/28/brrrr-method-investor-strategy/ (national, not Utah)
-- **Tags**: brrrr, financing
-- **Compliance exposure**: none
-- **Angle**: A realistic Utah BRRRR example with refinance math at current rates, the "slow BRRRR" variant, which Wasatch Front submarkets still pencil out (Ogden, Weber, Cache), and when to switch to buy-and-hold.
-- **Why it ranks**: There's search demand, competing answers are old forum posts, and current local numbers fill that gap.
-
 ### 2. DSCR Loans in Utah: How to Qualify on Rental Income Instead of W-2s
 - **Primary keyword**: dscr loan utah
 - **Volume gut-check**: med
@@ -67,6 +58,8 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 ## Published (auto-maintained by weekly routine)
 
 _Entries move here after the weekly routine publishes them._
+
+- [x] 2026-11-19 - BRRRR in Utah: Does the Strategy Still Work With Today's Prices and Rates?
 
 ---
 
