@@ -79,7 +79,7 @@ Update `sitemap.xml` with the new article URL (lastmod today, changefreq yearly,
 
 **Add the article to every listing page it belongs on** (otherwise it's live at its URL but orphaned — tag pages, blog hub, and strategy pages won't show it):
 
-1. **Blog hub** (`utah-real-estate-investor-blog/index.html`) — always. Insert a new `<article class="article-card ...">` card at the TOP of the grid (right after `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`). Card format: copy the exact HTML pattern from the first existing card. Use `/<slug>/hero.webp` for the image, title-case tag labels (e.g., "BRRRR", "Financing"), `data-tags="<space-separated tag slugs>"`, and `November DD, YYYY` date format.
+1. **Blog hub** (`utah-real-estate-investor-blog/index.html`) — always. Insert a new `<article class="article-card ...">` card at the TOP of the grid (right after `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`). Card format: copy the exact HTML pattern from the first existing card. Use `/<slug>/hero.webp` for the image, title-case tag labels (e.g., "BRRRR", "Financing"), `data-tags="<comma-separated tag slugs, no spaces>"` (e.g., `data-tags="brrrr,financing"` — the filter JS splits on commas, so a space between tags will silently break the tag chip filter), and `November DD, YYYY` date format.
 
 2. **Each tag page** the article belongs to — always. For each tag in the article's tag list, open `tag/<tag-slug>/index.html` and insert a card at the top of its grid (same insertion point). Note: tag page cards use a slightly different `<article>` class (no `article-card`, no `data-tags`, `loading="lazy"` on the img, `&rarr;` instead of the SVG arrow). Copy the exact HTML pattern from an existing card on that same tag page.
 
