@@ -55,7 +55,7 @@ Required loader scripts (include wherever embeds appear): `widgets.leadconnector
 
 ## Analytics / verification
 
-- GA4 measurement ID: `G-HMPNE7T1XC` (ships in every page's `<head>`)
+- GA4 measurement ID: `G-V024RX3XS7` (ships in every page's `<head>`)
 - Google Search Console verification: `DZLhn6VNe6SoeLyg2C_FYcXE18b7v140aR8OEr22mn8`
 
 ## Deploy workflow
