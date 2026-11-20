@@ -50,6 +50,7 @@ Write the article body:
 - 2-4 inline links to existing UIH articles (descriptive anchor text, never "click here")
 - 1-2 outbound links to authoritative sources (`target="_blank" rel="noopener"`)
 - **Every in-body mention of "Stodd Group" or "Stodd Group Real Estate" MUST link to `https://stoddgroup.com/` with `target="_blank" rel="noopener"`.** Includes the author bio template — if the bio copy says "Stodd Group Real Estate", that mention is a link too. Applies to body copy only, not JSON-LD, footer, or CTA bands where the link already exists in the chrome.
+- **Every link to the Stodd Group calendar MUST include UTM params** so HighLevel can attribute the lead to Utah Investor Hub. Always use: `https://go.stoddgroup.com/widget/bookings/intro-call-stodd-group-website?utm_source=utahinvestorhub.com&utm_medium=website`. Add `&utm_campaign=<article_slug>` when linking from a specific article's body so you can tell which article drove the booking.
 - Clear takeaway at the end — what should the reader do next
 
 **Required exclusions:**
