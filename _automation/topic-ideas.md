@@ -8,7 +8,59 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 ## Queue (next to publish, top first)
 
-_Queue is empty. The monthly research routine will add topics on the first Monday of each month. Add topics manually here if you want to seed the queue sooner._
+### 1. BRRRR in Utah: Does the Strategy Still Work With Today's Prices and Rates?
+- **Primary keyword**: brrrr utah
+- **Volume gut-check**: med
+- **Competitor coverage gap**: https://biggerpockets.com/forums/586/topics/555988-new-investor-do-brrrr-s-exist-in-our-current-utah-market, https://biggerpockets.com/forums/12/topics/871924-do-brrr-deals-work-in-the-utah-market (old, unresolved threads); https://propstream.com/news/is-the-brrrr-strategy-relevant-in-2026, https://www.inman.com/2026/09/28/brrrr-method-investor-strategy/ (national, not Utah)
+- **Tags**: brrrr, financing
+- **Compliance exposure**: none
+- **Angle**: A realistic Utah BRRRR example with refinance math at current rates, the "slow BRRRR" variant, which Wasatch Front submarkets still pencil out (Ogden, Weber, Cache), and when to switch to buy-and-hold.
+- **Why it ranks**: There's search demand, competing answers are old forum posts, and current local numbers fill that gap.
+
+### 2. DSCR Loans in Utah: How to Qualify on Rental Income Instead of W-2s
+- **Primary keyword**: dscr loan utah
+- **Volume gut-check**: med
+- **Competitor coverage gap**: https://griffinfunding.com/utah-mortgage-lender/dscr-loans-utah, https://easystreetcap.com/dscr-loans-utah/, https://www.corevestfinance.com/utah-dcsr-loans (all lender marketing; no neutral investor/REALTOR guide)
+- **Tags**: financing, first-time-investor
+- **Compliance exposure**: none (no specific rate promises)
+- **Angle**: DSCR math with Utah rent comps, typical requirements (1.0–1.25 ratio, ~680+ credit, 20–25% down), why rural or seasonal properties struggle to qualify, and when DSCR beats a conventional loan for scaling past 4 properties.
+- **Why it ranks**: Investors search this term with intent to act, and there's no non-lender answer on page one.
+
+### 3. Utah Security Deposit Law: The 30-Day Rule, Deductions and Penalties for Landlords
+- **Primary keyword**: utah security deposit law
+- **Volume gut-check**: high
+- **Competitor coverage gap**: https://ipropertymanagement.com/laws/utah-security-deposit-returns, https://www.hemlane.com/resources/utah-security-deposit-laws/ (contradict each other on penalties; most miss the 2025 amendment to Utah Code 57-17-3: https://le.utah.gov/xcode/Title57/Chapter17/C57-17-S3_2025050720250507.html)
+- **Tags**: tenants, property-management
+- **Compliance exposure**: tax/legal
+- **Angle**: Landlord-side deposit timeline (30 days, or 15 days after a forwarding address), the itemized deduction notice, normal wear and tear, the 2025 changes (5-business-day response after written demand), and a move-out checklist that heads off small-claims cases.
+- **Why it ranks**: Highest-volume topic in this batch, and current competing articles are out of date and contradict each other.
+
+### 4. Utah's 45% Residential Exemption on Rentals: The Declaration Landlords Forget to File
+- **Primary keyword**: utah residential exemption rental property
+- **Volume gut-check**: low
+- **Competitor coverage gap**: https://tax.utah.gov/property/exemptions/primary, https://utahcounty.gov/dept/assess/Data/ResidentialExemptionExplained.pdf (government pages only; nothing from the investor side)
+- **Tags**: taxes, property-management
+- **Compliance exposure**: tax/legal
+- **Angle**: Long-term rentals can qualify for the 45% primary residential exemption if the tenant lives there 183+ days and the owner files a residential declaration; STRs and vacation homes can't. Covers filing in each county and the savings on a typical rental.
+- **Why it ranks**: Low competition and high value to readers; many landlords miss this, and it showcases local authority.
+
+### 5. Renting an ADU in Utah: Owner-Occupancy Rules, Permits and the 30-Day Minimum
+- **Primary keyword**: utah adu rental rules
+- **Volume gut-check**: med
+- **Competitor coverage gap**: https://le.utah.gov/xcode/Title10/Chapter21/C10-21-S303_2025110620251206.html (statute text, renumbered from 10-9a-530 in Nov 2025), https://commerce.utah.gov/?p=32391 (brief summary); existing house-hacking posts never cover the owner-occupancy rule
+- **Tags**: house-hacking, utah-markets
+- **Compliance exposure**: city rules
+- **Angle**: What state law makes a permitted use, what cities can still restrict (owner occupancy, rentals under 30 days, separate meters, recorded notices), how HOA limits interact, and a city-by-city "check before you buy" list for house hackers.
+- **Why it ranks**: Most sources still cite the old code section, so an updated plain-English guide can win the term.
+
+### 6. Salt Lake City Short-Term Rental Rules: The 2026 License, 200-Night Cap and What Investors Need to Know
+- **Primary keyword**: salt lake city short term rental rules
+- **Volume gut-check**: med
+- **Competitor coverage gap**: https://www.axios.com/local/salt-lake-city/2026/07/01/short-term-rental-regulations-utah-limit, https://www.ksl.com/article/51512655/salt-lake-city-to-begin-requiring-business-licenses-for-short-term-rentals, https://www.sltrib.com/news/2026/08/14/airbnb-vs-salt-lake-city-short/, https://www.avalara.com/mylodgetax/en/blog/2026/07/what-to-know-about-new-Salt-Lake-City-Airbnb-laws-and-short-term-rental-regulations.html (news and tax-vendor coverage; no buyer-side guide; Millcreek and unincorporated Salt Lake County uncovered)
+- **Tags**: short-term-rentals, utah-markets
+- **Compliance exposure**: city rules
+- **Angle**: The July 1, 2026 ordinance (license before listing, 2-night minimum, 200-night cap, 10% cap in 10+ unit buildings, off-street parking), 200-night STR vs. 30-day-plus rental math, Millcreek's owner-occupancy contrast, and a pre-offer checklist. Writer must check https://www.slc.gov/Finance/short-term-rentals/ for current status (applications were paused; council studying amendments) and frame it as "how to check," not settled rules.
+- **Why it ranks**: The ordinance is new, nobody has written the investor version yet, and it links naturally from the Salt Lake City page.
 
 ---
 
