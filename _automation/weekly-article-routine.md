@@ -46,6 +46,7 @@ Write the article body:
 - **If topic flagged `city rules`:** Say "confirm current rules with the city's planning department before offering on anything." Link to utah.gov or the specific city's website.
 - **If topic flagged `Fair Housing`:** Never reference protected classes when describing tenants or neighborhoods. "Young professionals near the U" is fine; "singles" or "families" as a tenant target is not.
 - **If topic flagged `REALTOR code`:** Avoid any phrasing that could be read as steering, puffery, or an undisclosed agency relationship. State Jocelyn's REALTOR status + brokerage (Stodd Group / Canovo Group) where helpful.
+- **If topic involves health or environmental hazards** (radon, lead paint, asbestos, mold, carbon monoxide, water quality, meth residue, etc.) — whether or not the topic is explicitly flagged: never quote specific EPA action levels, remediation thresholds, or health code numbers as actionable advice. Frame authoritative data as "the EPA sets an action level of X" or "the CDC recommends Y" with the citation, then always pivot to "a certified home inspector or licensed environmental specialist is the authoritative source for your specific property." Never tell readers to self-remediate serious hazards — always point to certified professionals. Add the `tax/legal`-style caution prominently in the article's intro and conclusion.
 
 **Required inclusions:**
 - 2-4 inline links to existing UIH articles (descriptive anchor text, never "click here")
