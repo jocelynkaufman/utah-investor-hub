@@ -8,15 +8,6 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 ## Queue (next to publish, top first)
 
-### 3. Utah Security Deposit Law: The 30-Day Rule, Deductions and Penalties for Landlords
-- **Primary keyword**: utah security deposit law
-- **Volume gut-check**: high
-- **Competitor coverage gap**: https://ipropertymanagement.com/laws/utah-security-deposit-returns, https://www.hemlane.com/resources/utah-security-deposit-laws/ (contradict each other on penalties; most miss the 2025 amendment to Utah Code 57-17-3: https://le.utah.gov/xcode/Title57/Chapter17/C57-17-S3_2025050720250507.html)
-- **Tags**: tenants, property-management
-- **Compliance exposure**: tax/legal
-- **Angle**: Landlord-side deposit timeline (30 days, or 15 days after a forwarding address), the itemized deduction notice, normal wear and tear, the 2025 changes (5-business-day response after written demand), and a move-out checklist that heads off small-claims cases.
-- **Why it ranks**: Highest-volume topic in this batch, and current competing articles are out of date and contradict each other.
-
 ### 4. Utah's 45% Residential Exemption on Rentals: The Declaration Landlords Forget to File
 - **Primary keyword**: utah residential exemption rental property
 - **Volume gut-check**: low
@@ -86,6 +77,7 @@ Topics queued for weekly auto-articles. The weekly routine picks the TOP uncheck
 
 _Entries move here after the weekly routine publishes them._
 
+- [x] 2026-11-24 - Utah Security Deposit Law: The 30-Day Rule, Deductions and Penalties for Landlords
 - [x] 2026-11-19 - DSCR Loans in Utah: How to Qualify on Rental Income Instead of W-2s
 - [x] 2026-11-19 - BRRRR in Utah: Does the Strategy Still Work With Today's Prices and Rates?
 
