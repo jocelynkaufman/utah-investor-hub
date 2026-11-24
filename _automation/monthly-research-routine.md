@@ -25,9 +25,11 @@ ls -d */ | grep -v '^_' | grep -v 'real-estate-investing\|tag\|wp-content\|_astr
 Web search for current Utah investor topics, trends, and competitor coverage gaps. Spend 30-45 min of real research. Example searches:
 - "utah real estate investing 2026"
 - "utah rental property investor"
-- Specific sub-markets: Lehi, Draper, Sandy, St. George, Logan
+- Specific sub-markets: Lehi, Draper, Sandy, Logan, Heber, Tooele
 - Specific programs: UHC, FHA, VA, cost seg, 1031, DSCR
 - Investor pain points: Section 8, security deposit law, radon, lead paint
+
+**Service area — hard rule:** Jocelyn only works the Wasatch Front. Market-specific topics MUST be in one of these 8 counties: Tooele, Salt Lake, Davis, Weber, Utah, Summit, Wasatch, Cache. No St. George, Washington County, Iron County, Cedar City, Moab, or any other southern/eastern Utah market. If a research angle only works for southern Utah (STR Zion, Washington County growth, etc.), drop it — content outside her service area attracts leads she can't serve.
 
 ### STEP 2 — Pick 4-6 topics
 

@@ -40,6 +40,7 @@ Write the article body:
 
 **Hard compliance rules (adjust tone per the Compliance exposure flag in the topic):**
 
+- **Service area — hard rule:** Jocelyn only works the Wasatch Front. Articles MUST stay inside these 8 counties: Tooele, Salt Lake, Davis, Weber, Utah, Summit, Wasatch, Cache. No St. George, Washington County, Iron County, Cedar City, Moab, or any other southern/eastern Utah market content. If the queued topic drifts outside, skip it and pick the next one — flag the issue in the preview.
 - **Always:** No cited Utah statutes, HB/SB numbers, or legal code sections. No invented stats or prices (use ranges with cited sources, or skip the number). No "guaranteed/best/secret" language. No promises of returns.
 - **If topic flagged `tax/legal`:** Prominently include "consult a Utah-licensed CPA" (for tax) or "consult a Utah-licensed attorney" (for legal). Do not give specific advice.
 - **If topic flagged `city rules`:** Say "confirm current rules with the city's planning department before offering on anything." Link to utah.gov or the specific city's website.
