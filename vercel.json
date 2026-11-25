@@ -12,12 +12,12 @@
     },
     {
       "source": "/strategy-call",
-      "destination": "https://go.stoddgroup.com/widget/bookings/intro-call-stodd-group-website?utm_source=utahinvestorhub.com&utm_medium=website&utm_campaign=legacy_strategy_call_redirect",
+      "destination": "https://go.stoddgroup.com/widget/bookings/intro-call-stodd-group-website?utm_source=utahinvestorhub&utm_medium=website&utm_campaign=book_call",
       "permanent": true
     },
     {
       "source": "/strategy-call/",
-      "destination": "https://go.stoddgroup.com/widget/bookings/intro-call-stodd-group-website?utm_source=utahinvestorhub.com&utm_medium=website&utm_campaign=legacy_strategy_call_redirect",
+      "destination": "https://go.stoddgroup.com/widget/bookings/intro-call-stodd-group-website?utm_source=utahinvestorhub&utm_medium=website&utm_campaign=book_call",
       "permanent": true
     },
     {
