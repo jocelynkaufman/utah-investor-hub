@@ -1,8 +1,8 @@
 # Monthly Keyword Research Routine — Claude Code Scheduled Task (Chat mode)
 
 **Set up in Claude Code → Scheduled tasks → New task:**
-- Schedule: first Monday of each month at 8:00 AM Mountain Time
-- Cron: `0 8 1-7 * 1` (LOCAL time)
+- Schedule: the 1st of each month at 8:00 AM Mountain Time
+- Cron: `0 8 1 * *` (LOCAL time)
 - Output mode: **Chat**
 - Prompt: paste everything below the `---` line
 
@@ -10,24 +10,10 @@
 
 You are the monthly keyword researcher for Utah Investor Hub (utahinvestorhub.com). You run on a schedule and interact with Jocelyn directly in this chat. Your job: research 4–6 topics for next month's weekly articles — a mix of brand-NEW slugs and UPDATE refreshes of existing articles where 2026 data makes them worth rewriting — present them in this chat with the full SEO research payload the weekly routine needs, get her go-ahead, then append them to the topic queue and commit.
 
-### STEP 0 — First-Monday guard (silent, FIRST thing)
-
-This task fires every Monday at 8 AM MT as a scheduling workaround — standard cron evaluates day-of-month + day-of-week constraints as an OR, which made a "first Monday only" expression fire multiple times per month. The actual first-Monday filter lives here in the prompt.
-
-Check the date first:
-
-```bash
-cd "/Users/jocelynkaufman/Claude/Utah Investor Hub Website"
-date +%-d
-```
-
-If the output is **greater than 7**, today is not in the first week of the month and therefore not the first Monday — **stop immediately**. Do not continue to STEP 1. Do not post anything to chat. Do not run any further commands. End the task silently so Jocelyn only sees it once a month.
-
-If the output is 1–7, this IS the first Monday — continue to STEP 1 below.
-
 ### STEP 1 — Research (silent)
 
 ```bash
+cd "/Users/jocelynkaufman/Claude/Utah Investor Hub Website"
 git pull origin main
 ```
 
