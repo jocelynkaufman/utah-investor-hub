@@ -6,7 +6,7 @@ Utah Investor Hub is a lead-generation funnel for Stodd Group real estate, focus
 
 ## CSS gotcha — Tailwind classes are purged
 
-The styling was built with Astro + Tailwind v4, and the compiled bundle at `_astro/_slug_.DtdKSYIE4.css` only contains utility classes that were seen by Tailwind at build time.
+The styling was built with Astro + Tailwind v4, and the compiled bundle at `_astro/_slug_.DtdKSYIE5.css` only contains utility classes that were seen by Tailwind at build time.
 
 **This means: adding a Tailwind class to HTML that isn't already in the bundle will silently have no effect.** The class string is in the markup, the browser sees it, but no rule exists for it.
 
@@ -25,7 +25,7 @@ The styling was built with Astro + Tailwind v4, and the compiled bundle at `_ast
 Bump the CSS filename hash whenever you edit the CSS file so browsers don't serve the old bundle:
 
 ```bash
-OLD=DtdKSYIE4 NEW=DtdKSYIE5
+OLD=DtdKSYIE5 NEW=DtdKSYIE6
 mv _astro/_slug_.${OLD}.css _astro/_slug_.${NEW}.css
 grep -rl "${OLD}" --include="*.html" . | xargs perl -i -pe "s/${OLD}/${NEW}/g"
 ```
