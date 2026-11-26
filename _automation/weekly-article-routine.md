@@ -54,14 +54,38 @@ Write the article body:
 **Required FAQ section** (every article, always):
 End the article body with an `<h2>Frequently Asked Questions</h2>` block containing 3–5 Q&A pairs using the **verbatim** PAA questions from the topic's `PAA questions` field. Format each as `<h3>` question + 1–2 short paragraph answer. Do NOT rephrase PAA questions into blog-voice titles — keep the exact wording real users type, because Google matches the on-page question text against the natural-language query. A rephrased question loses the match.
 
+**Universal compliance rules (apply to EVERY article, no flag needed — Utah real estate + Fair Housing):**
+
+1. **Describe properties, prices, rents, commute, amenities, and demand drivers — never people.** Banned phrases: `young families`, `young professionals`, `millennials`, `retirees`, `seniors`, `singles`, `students`/`missionaries` used as tenant descriptions, `family-friendly`, `safe neighborhood`, `good schools`, `excellent schools`, `established schools`, `diverse`, `community values`, `exclusive`. Use demand-driver or property language instead: "university-driven rental demand" instead of "students"; "downtown-employer renters" instead of "young professionals"; "established neighborhoods" or "parks and amenities" instead of "family-friendly" / "good schools"; "long-tenure tenants" instead of "families" as a tenant class. Schools are never a selling point anywhere on the site.
+
+2. **No superlatives about Jocelyn or the team.** Never write "best," "#1," "top agent," "top-rated," "the go-to," or any ordinal/superlative framing of her or the team. No unverifiable stats about her, the team, or the business (e.g., "helped 1,000+ investors" is out; "deep Wasatch Front experience" is in). Her portfolio unit count is **"50+"** — never "52+" or any other number.
+
+3. **Agent compensation language.** Never say buyers don't pay their agent, never say the seller always pays. Say compensation is **negotiable, not set by law, and set in a written buyer agreement before touring**. Sellers may agree to cover some or all of the buyer's agent compensation, negotiated per offer. This wording is required wherever commission comes up — FAQ answers, body copy, worked examples, JSON-LD.
+
+4. **Tax or legal claims require the qualifier + professional referral in the same paragraph as the claim** (not at the end of the article). E.g., "A real estate professional can offset W-2 income with rental losses only with REPS status or material participation in an STR — talk to your CPA." Attorney referrals apply to legal topics (landlord-tenant law, LLC formation, lease drafting, evictions, 1031 structuring, etc.).
+
+5. **Every article ends with the brokerage + Equal Housing Opportunity line.** The `_templates/article.html` disclaimer block already contains it: *"Jocelyn Stoddard is a licensed Utah REALTOR with Stodd Group Real Estate, brokered under Canovo Group. Equal Housing Opportunity."* Do not remove or rewrite this on NEW articles or UPDATE refreshes. If a refresh touches that block, verify the line is intact before shipping.
+
+**Pre-publish compliance scan (required before STEP 4 preview):**
+
+```bash
+# Scan the drafted body for banned demographic phrases and school-as-amenity language.
+# Any match blocks the publish — rewrite the offending sentence before continuing.
+grep -niE 'young famil|young professional|\bmillennial|\bretiree|\bseniors?\b|\bsingles?\b|family[- ]friendly|safe neighborhood|good school|excellent school|established school|\bdiverse\b|community values|\bexclusive\b' <slug>/index.html
+# Scan for superlatives about Jocelyn or the team.
+grep -niE 'best agent|#1|top[- ]rated|top agent|go-to agent|utah.?s best|utah.?s top|most trusted' <slug>/index.html
+```
+
+Both scans must return zero hits before posting the chat preview. Capture confirmation for the claim-audit section of the chat preview: "Compliance scan: 0 hits."
+
 **Hard compliance rules (adjust tone per the Compliance exposure flag in the topic):**
 
 - **Service area — hard rule:** Jocelyn only works the Wasatch Front. Articles MUST stay inside these 8 counties: Tooele, Salt Lake, Davis, Weber, Utah, Summit, Wasatch, Cache. No St. George, Washington County, Iron County, Cedar City, Moab, or any other southern/eastern Utah market content. If the queued topic drifts outside, skip it and pick the next one — flag the issue in the preview.
 - **Always:** No cited Utah statutes, HB/SB numbers, or legal code sections. No invented stats or prices (use ranges with cited sources, or skip the number). No "guaranteed/best/secret" language. No promises of returns.
-- **If topic flagged `tax/legal`:** Prominently include "consult a Utah-licensed CPA" (for tax) or "consult a Utah-licensed attorney" (for legal). Do not give specific advice.
+- **If topic flagged `tax/legal`:** Prominently include "consult a Utah-licensed CPA" (for tax) or "consult a Utah-licensed attorney" (for legal). Universal rule #4 still applies — the qualifier goes in the same paragraph as the claim, not just in a closing disclaimer.
 - **If topic flagged `city rules`:** Say "confirm current rules with the city's planning department before offering on anything." Link to utah.gov or the specific city's website.
-- **If topic flagged `Fair Housing`:** Never reference protected classes when describing tenants or neighborhoods. "Young professionals near the U" is fine; "singles" or "families" as a tenant target is not.
-- **If topic flagged `REALTOR code`:** Avoid any phrasing that could be read as steering, puffery, or an undisclosed agency relationship. State Jocelyn's REALTOR status + brokerage (Stodd Group / Canovo Group) where helpful.
+- **If topic flagged `Fair Housing`:** This flag amplifies attention but Universal rule #1 above applies to EVERY article regardless of flag. Reread the banned-phrase list before drafting and run the pre-publish scan twice.
+- **If topic flagged `REALTOR code`:** Avoid any phrasing that could be read as steering, puffery, or an undisclosed agency relationship. State Jocelyn's REALTOR status + brokerage (Stodd Group / Canovo Group) where helpful. Universal rule #2 bans all superlatives about the team — do not reintroduce them here.
 - **If topic involves health or environmental hazards** (radon, lead paint, asbestos, mold, carbon monoxide, water quality, meth residue, etc.) — whether or not the topic is explicitly flagged: never quote specific EPA action levels, remediation thresholds, or health code numbers as actionable advice. Frame authoritative data as "the EPA sets an action level of X" or "the CDC recommends Y" with the citation, then always pivot to "a certified home inspector or licensed environmental specialist is the authoritative source for your specific property." Never tell readers to self-remediate serious hazards — always point to certified professionals. Add the `tax/legal`-style caution prominently in the article's intro and conclusion.
 
 **Required inclusions:**
@@ -160,6 +184,10 @@ Then post links and claim audit:
 > **Outbound sources cited:** [list of URLs]
 >
 > **Claim audit:** [every numeric claim, statute reference, or city-rule mention worth your eyes — if none, say "no sensitive claims"]
+> **Compliance scan:** [N] hits on banned-phrase grep + [M] hits on superlative grep (both should be 0 — if nonzero, rewrite and re-scan before posting)
+> **Commission language check:** [one-line confirmation that any commission mention uses the Universal rule #3 wording; "n/a" if the article doesn't touch commission]
+> **Tax/legal qualifier check:** [one-line confirmation that any tax or legal claim has the same-paragraph CPA/attorney referral per Universal rule #4; "n/a" if the article doesn't touch tax/legal]
+> **Brokerage + EHO line present:** yes (confirms the template disclaimer block is intact)
 
 Close with:
 
@@ -220,7 +248,8 @@ Follow STEP 2 above (NEW path research + write) FULLY — including:
 - Competitor-gap undercutting (first).
 - 2026 stats / current Utah context.
 - All five SEO disciplines (keyword placement, required FAQ section, LSI variants, descriptive anchors).
-- Every hard compliance rule.
+- Every Universal compliance rule AND every Hard compliance rule.
+- The pre-publish compliance scan (grep for banned phrases + superlatives) MUST return zero hits. This applies to UPDATEs too — the old text being "already live" doesn't exempt it. If the old article uses any banned phrase, the refresh rewrites that sentence.
 
 **Keep the same title, slug, and H1 unless the primary keyword materially changed.** If it did — **STOP and ask before changing anything.** Slug changes break inbound links + lose GSC history. Do not touch the slug without explicit approval.
 

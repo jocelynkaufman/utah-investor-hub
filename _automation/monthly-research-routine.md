@@ -37,6 +37,14 @@ For each candidate topic, also pull:
 
 **Service area — hard rule:** Jocelyn only works the Wasatch Front. Market-specific topics MUST be in one of these 8 counties: Tooele, Salt Lake, Davis, Weber, Utah, Summit, Wasatch, Cache. No St. George, Washington County, Iron County, Cedar City, Moab, or any other southern/eastern Utah market. If a research angle only works for southern Utah (STR Zion, Washington County growth, etc.), drop it — content outside her service area attracts leads she can't serve.
 
+**Universal compliance — hard rule:** The weekly writer applies these to every article, so topics must survive them at research time. Drop (or reframe) any angle that only works by describing people instead of properties/prices/rents/commute/amenities/demand drivers. Specifically:
+
+- **No demographic-targeting topics.** No "best Utah neighborhoods for young families / retirees / millennials / seniors / singles," no "family-friendly house hacks," no "student rental guide for Provo renters." If the *only* way an angle makes sense is to target a population group, drop it. Instead reframe to the demand driver: "high university-driven rental demand near BYU" rather than "where to rent to BYU students." A topic that needs the word "families" to work is not a topic — it's a trap.
+- **No superlatives about Jocelyn or the team.** No "why Jocelyn is Utah's top investor agent" or similar topics. Angles like "how to vet an investor-friendly Utah REALTOR" are fine; branded hagiography is not.
+- **No topics that require us to tell buyers they don't pay their agent** or that the seller always pays. Buyer-agent compensation topics must assume the neutral, legally-accurate framing (negotiable, not set by law, buyer agreement before touring). If the angle collapses when framed that way, drop it.
+- **Tax/legal topics are welcome** but flag `Compliance exposure: tax/legal` so the weekly writer includes the same-paragraph CPA/attorney qualifier. Topics that need to give specific legal advice (specific statute interpretation, specific tax strategy for a specific scenario) are out.
+- **"Good schools" / "safe neighborhood" / "diverse" / "community values" / "exclusive"** should not appear in a topic title, angle, or primary keyword. If a competitor-URL covers an angle through those terms, the gap we fill is the *amenity/demand-driver* reframing, not a parallel demographic pitch.
+
 ### STEP 2 — Classify each candidate: NEW vs UPDATE vs DROP
 
 For each candidate topic, check overlap against existing UIH articles:
